@@ -11,7 +11,7 @@ let pokemonResponse = axios.get("https://pokeapi.co/api/v2/pokemon/ditto")
   let pokemonJson = await PokemonResponse.json();
 
   console.log(pokemonJson)
-  res.send('Hello World!')
+  res.send("Pokemon!")
 })
 
 app.listen(port, () => {

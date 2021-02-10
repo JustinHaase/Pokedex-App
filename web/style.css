@@ -1,0 +1,13 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 10px;
+    grid-auto-rows: 300px 200px;
+    
+  }
+
+  .pokecard {
+    background-color:aqua;
+    height: 300px;
+    width: 200px;
+  }
