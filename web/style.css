@@ -1,19 +1,24 @@
 
  .main-header {
   position:fixed;
-  background: rgb(250, 207, 155);
+  background: rgb(175, 175, 175);
   box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   width: 100%;
   top: 0;
   left:0;
  }
- .random {
+ .headcontainer {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
  }
- .randomtwo {
+ .sortmenu {
    margin-right: auto;
+ }
+
+ button {
+ background: bisque;
+ box-shadow: 0 1px 4px rgba(0,0,0,0.4);
  }
  
  .container {
