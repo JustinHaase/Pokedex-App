@@ -8,7 +8,7 @@ app.use(cors())
 
 //app.use('/pokemon', express.static('web'))
 
-let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+// let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 
 app.get('/pokemon/random', async (req, res) => {

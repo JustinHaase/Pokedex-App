@@ -71,6 +71,7 @@
 
  .sortmenu {
    margin-left: auto;
+   padding: 50px, 50px, 0, 0;
  }
 
  
@@ -99,6 +100,26 @@
     border: 6px solid #171717;
   }
 
+  @keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+
+.pokecard:hover {
+	animation: bounce .5s;
+}
   /* img{
     width: 120px;
     height: 120px;
