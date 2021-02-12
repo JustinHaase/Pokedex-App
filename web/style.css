@@ -13,17 +13,28 @@
    justify-content: space-around;
  }
 
- .btn {
-  background-image: "img/Poke_Ball.png";
-  margin-right: auto;
+ .hover-rotate {
+  overflow: hidden;
+  margin: 8px;
+  min-width: 240px;
+  max-width: 320px;
+  width: 100%;
+}
 
- }
+.hover-rotate img {
+  transition: all .5s;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.hover-rotate:hover img {
+  transform: rotate(360deg);
+}
 
  .center {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 50%; 
+    height: 117.75px;
+    width: 320px;
+    image-orientation: center;
   } 
 
  .dropbtn {
@@ -88,7 +99,7 @@
     border: 6px solid #171717;
   }
 
-  img{
+  /* img{
     width: 120px;
     height: 120px;
-  }
+  } */
