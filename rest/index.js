@@ -1,19 +1,35 @@
 const express = require('express')
-const axios = require ('axios')
+//const axios = require ('axios')
 const cors = require("cors")
 const app = express()
 const port = 4000
 
 app.use(cors())
 
+const fetch = require("node-fetch");
+
+const promises = [];
+
+app.get('/pokemon/random', (req, res) => {
+    for (let i = 1; i <= 150; i++) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        promises.push(fetch(url).then((res) => res.json()));
+    }
+    Promise.all(promises).then((results) => {
+        const pokemonResponse = results.map((result) => ({
+            name: result.name,
+            image: result.sprites['front_default'],
+            type: result.types.map((type) => type.type.name).join(', '),
+            id: result.id
+        }));
+        
+        res.send(pokemonResponse);
+    });
+});
+
 //app.use('/pokemon', express.static('web'))
 
 // let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-
-
-
-app.get('/pokemon/random', async (req, res) => {
-let pokemonResponse = await axios.get("https://pokeapi.co/api/v2/pokemon/1-25");
 
 //not working as an object on the web side. Getting a string   
  /*let createPoke = {
@@ -33,36 +49,7 @@ let pokemonResponse = await axios.get("https://pokeapi.co/api/v2/pokemon/1-25");
      })
 
 
-
 app.listen(port, () => {
   console.log(`Poke app listening at http://localhost: ${port}`)
 })
 
-
-
-
-
-
-
-
-/*
-app.get('/pokemon/random', async (req, res) => {
-let pokemonResponse = axios.get("https://pokeapi.co/api/v2/pokemon")
-  let pokemonJson = await pokemonResponse.data;
- 
-  //https://dog.ceo/api/breeds/image/random
-//https://pokeapi.co/api/v2/pokemon/ditto
-  console.log(pokemonJson);
-  res.send("Pokemon!")
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
-
-xhr.open("GET","http://localhost:4000" )
-
-//xhr.open("GET","localhost:4000/pokemon/random" )
-xhr.send();
-
-*/
