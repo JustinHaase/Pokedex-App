@@ -11,8 +11,9 @@ app.use(cors())
 // let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
 
+
 app.get('/pokemon/random', async (req, res) => {
-let pokemonResponse = await axios.get("https://pokeapi.co/api/v2/pokemon/25");
+let pokemonResponse = await axios.get("https://pokeapi.co/api/v2/pokemon/1-25");
 
 //not working as an object on the web side. Getting a string   
  /*let createPoke = {
