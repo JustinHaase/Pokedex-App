@@ -39,6 +39,8 @@ $('pokecard').has('div.grass').css('background-color', 'green');
 
 //create dynamic styling effect in each card based on data pulled from api
 
-//if type = 
-
-//document.getElementById("ptype").style["padding-top"] = "10px";
+const type = myObject[i].type;
+const classToAddToPokemon = colorMap[type];
+document.querySelector(
+        `#ptype${i + 1}`
+      ).classList.add(classToAddToPokemon);
