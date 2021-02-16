@@ -41,23 +41,30 @@
 
  .dropbtn {
   background-color: bisque;
-  color: grey;
+  color: rgb(51, 49, 47);
   padding: 16px;
   font-size: 16px;
   border: none;
+  border-radius: 4px;
 }
 
 .dropdown {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  right: 10px;
+  top: 10px;
+
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: lightgrey;
+  background-color: rgb(248, 206, 156);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
   min-width: 200px;
   z-index: 1;
+  right: 0;
 }
 
 .dropdown-content a {
@@ -69,7 +76,7 @@
 
 .dropdown-content a:hover {background-color: white;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: grey;}
+.dropdown:hover .dropbtn {background-color: rgb(248, 214, 172);}
 
  .sortmenu {
    margin-left: auto;
