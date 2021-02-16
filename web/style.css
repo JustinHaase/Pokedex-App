@@ -138,6 +138,55 @@ img {
   height:auto;
 }
 
+.type__fire {
+  background-color: #FDDFDF;
+  }
+.type__grass {
+  background-color: #DEFDE0;
+  }
+.type__electric {
+  background-color: #FCF7DE;
+  }
+.type__water {
+  background-color: #DEF3FD;
+  }
+.type__ground {
+  background-color: #f7d3aa;
+  }
+.type__rock {
+  background-color: #D5D5D4;
+  }
+.type__fairy {
+  background-color: #FCEAFF;
+  }
+.type__poison {
+  background-color: #98D7A5;
+  }
+.type__bug {
+  background-color: #F8D7A5;
+  }
+.type__dragon {
+  background-color: #97B3E6;
+  }
+.type__psychic {
+  background-color: #EAEDA1;
+  }
+.type__flying {
+  background-color: #dbb2f7;
+  }
+.type__fighting {
+  background-color: #E6E0D4;
+  }
+.type__normal {
+  background-color: #F5F5F5;
+  }
+
+
+
+
+
+
+  
 /* .type[id="grass"] { 
 .pokecard {background-color: green;}
   }  */
