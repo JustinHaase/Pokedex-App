@@ -7,6 +7,7 @@
   top: 0;
   left:0;
  }
+
  .headcontainer {
    display: flex;
    flex-wrap: wrap;
@@ -39,6 +40,7 @@
     image-orientation: center;
   } 
 
+  /*-----sorting menu-----*/
  .dropbtn {
   background-color: bisque;
   color: rgb(51, 49, 47);
@@ -78,12 +80,13 @@
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: rgb(248, 214, 172);}
 
- .sortmenu {
-   margin-left: auto;
-   padding: 50px, 50px, 0, 0;
+.sortmenu {
+  margin-left: auto;
+  padding: 50px, 50px, 0, 0;
   
  }
 
+ /*-----sorting menu-----*/
  
  .container {
     display: grid;
@@ -99,21 +102,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: url(PokeballCUR.png), auto;
   }
-  
+
   .pokecard {
     /*background-color: aqua;
     background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);*/
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: rgb(34, 28, 28);
     border-radius: 4px;
-    border: 6px solid #171717;
+    border: 3px solid #171717;
     overflow: auto;
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+    flex-direction: column;
+    padding: 0;
   }
 
-  /* -----pokemon card animation----- */
+  /* -----pokemon card animation 1----- */
 
   @keyframes bounce {
     0%, 20%, 60%, 100% {
@@ -136,43 +141,42 @@
 	animation: bounce .5s;
 }
 
+/* -----pokemon card animation 2----- */
+
+
+
 /* -----pokemon card contents----- */
 
-.name {
-  max-width: 100%;
-  max-height: 10%;
+.pokecard.name {
+  width: 100%;
+  height: auto;
   text-align: center;
   position: absolute;
 
 }
 
-.number {
-  max-width: 100%;
-  max-height: 10%;
+.pokecard.number {
+  width: 100%;
+  height: auto;
   text-align: center;
   position: absolute;
-
 }
 
-.picture {
-  max-width: 100%;
-  max-height: 70%;
-
-
-.picture img {
-  object-fit: contain;
-  width: 75%;
-  min-width: 75%;
-  vertical-align: middle;
+.pokecard img{
+  margin: 0 auto;
+  width: 100%;
 }
 
-.type {
+.pokecard.type {
   max-width: 100%;
-  max-height: 10%;
+  max-height: auto;
   text-align: center;
   position: absolute;
   bottom: 0;
 }
+/* .name{
+  font-style: bold;
+} */
 
 .type__fire {
   background-color: #FDDFDF;

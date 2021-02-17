@@ -24,7 +24,7 @@ xhr.onreadystatechange =  function () {
     }
     
     for(let i = 0; i<13 ; i++){
-    document.querySelector(`#pname${i+1}`).textContent = `Name: ${myObject[i].name} Id number:${myObject[i].id}`;
+    document.querySelector(`#pname${i+1}`).textContent = `Name: ${myObject[i].name} Id #:${myObject[i].id}`;
     document.querySelector(`#ptype${i+1}`).textContent = `Type: ${myObject[i].type}`;
   
     }   
@@ -35,12 +35,10 @@ xhr.onreadystatechange =  function () {
 xhr.open("GET", "http://localhost:4000/pokemon/random");
 xhr.send();
 
-$('pokecard').has('div.grass').css('background-color', 'green');
-
 //create dynamic styling effect in each card based on data pulled from api
 
-const type = myObject[i].type;
-const classToAddToPokemon = colorMap[type];
-document.querySelector(
-        `#ptype${i + 1}`
-      ).classList.add(classToAddToPokemon);
+// const type = myObject[i].type;
+// const classToAddToPokemon = colorMap[type];
+// document.querySelector(
+//         `#ptype${i + 1}`
+//       ).classList.add(classToAddToPokemon);
