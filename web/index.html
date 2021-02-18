@@ -12,9 +12,14 @@ info from the pokedex api there will be a randomizor button (surpirse me!) and a
 by name or number-->
 <header class= "main-header" id= "header">
     <div class = "headcontainer">
-        <button class="btn"><img class = "center" src = "logo.png"></button>
+        <button type="button" id="pbutton" class="play" onclick="playAudio()"><img class="center" src = "logo4.png" align="left" ></button>
+        <audio id="music">
+            <source src="Pokemon-Theme.mp3" type="audio/mp3"/>
+          </audio>
         <a id="shuffle">
-            <figure class="hover-rotate"><img src = "Poke_Ball.png"  height= "153.4" width = 153.4></figure>
+            <div class="pokeball">
+                <figure class="hover-rotate"><img src = "Poke_Ball.png" height=154px width=154px ></figure>
+            </div>
         </a>
         <div class = "sortmenu">
             <div class="dropdown">
@@ -29,7 +34,6 @@ by name or number-->
     </div>    
 </div>
 </header>
-
 <div class="container">
     <div class="pokecard">
         <div class="name" id="pname1"></div>

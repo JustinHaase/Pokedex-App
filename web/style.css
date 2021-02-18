@@ -14,11 +14,88 @@
    justify-content: space-around;
  }
 
- .btn{
-   background: none;
-   border: none;
+/*-----Pokemon Image Button-----*/
+
+
+button{
+    width: 305px;
+    height: 95px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: url(logo2.png);
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#pbutton{
+  margin-left: -10px;
+ }
+button:before{
+  content:'';
+  position: absolute;
+  left:-2px;
+  top: -2px;
+  z-index: -1;
+  background: linear-gradient(90deg, #1c4b27, #448a95, #e2e32b, #961a45, #994025, #994025, #4a677d);
+  background-size: 400%;
+  filter: blur(10px);
+  height: calc(100% + 3px);
+  width: calc(100% + 3px);
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.1s ease-in-out;
+  animation: glowbutton 10s linear infinite;
+
  }
 
+button:hover:before{
+   opacity: 1;
+ }
+
+button:active{
+    color:black;
+ }
+ 
+button:after{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb#111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+ }
+
+button:active:after{
+    background: transparent;
+ }
+
+@keyframes glowbutton{
+  0%{
+      background-position: 0 0;
+  }
+  50%{
+      background-position: 400% 0;
+  }
+  100%{
+      background-position: 0 0;
+  }
+ }
+
+ .play:hover {
+   cursor: url(pokenoteCUR.png), auto;
+ }
+
+ /*-------pokeball---------*/
+
+ .pokeball{
+  margin-left: 60px;
+}
  .hover-rotate {
   overflow: hidden;
   margin: 8px;
@@ -91,7 +168,7 @@
   
  }
 
- /*-----sorting menu-----*/
+ /*-----------------------*/
  
  .container {
     display: grid;
