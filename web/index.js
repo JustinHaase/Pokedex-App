@@ -24,8 +24,8 @@ xhr.onreadystatechange =  function () {
     }
     
     for(let i = 0; i<13 ; i++){
-    document.querySelector(`#pname${i+1}`).textContent = `Name: ${myObject[i].name} Id #:${myObject[i].id}`;
-    document.querySelector(`#ptype${i+1}`).textContent = `Type: ${myObject[i].type}`;
+    document.querySelector(`#pname${i+1}`).textContent = `${myObject[i].name} id:${myObject[i].id}`;
+    document.querySelector(`#ptype${i+1}`).textContent = `${myObject[i].type}`;
   
     }   
      
