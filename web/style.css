@@ -6,23 +6,24 @@
   width: 100%;
   top: 0;
   left:0;
+  z-index: 10;
  }
 
  .headcontainer {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-around;
+   z-index: 10;
  }
 
 /*-----Pokemon Image Button-----*/
 
 
 button{
-    width: 305px;
-    height: 95px;
+    width: 370px;
+    height: 150px;
     outline: none;
     border: none;
-    cursor: pointer;
     color: #fff;
     background: url(logo2.png);
     position: relative;
@@ -32,23 +33,24 @@ button{
 
 #pbutton{
   margin-left: -10px;
+  cursor: url("pokenoteCUR.png"), auto;
  }
 button:before{
   content:'';
   position: absolute;
   left:-2px;
-  top: -2px;
+  top: 1px;
   z-index: -1;
   background: linear-gradient(90deg, #1c4b27, #448a95, #e2e32b, #961a45, #994025, #994025, #4a677d);
   background-size: 400%;
-  filter: blur(10px);
+  filter: blur(1px);
   height: calc(100% + 3px);
   width: calc(100% + 3px);
   opacity: 0;
   border-radius: 10px;
   transition: opacity 0.1s ease-in-out;
   animation: glowbutton 10s linear infinite;
-
+  cursor: url(pokenoteCUR.png), auto;
  }
 
 button:hover:before{
@@ -87,10 +89,6 @@ button:active:after{
   }
  }
 
- .play:hover {
-   cursor: url(pokenoteCUR.png), auto;
- }
-
  /*-------pokeball---------*/
 
  .pokeball{
@@ -117,12 +115,24 @@ button:active:after{
 }
 
  .center {
-    height: 117.75px;
-    width: 320px;
+    height: 166.66px;
+    width: 366.66px;
     image-orientation: center;
   } 
 
   /*-----sorting menu-----*/
+
+ .sortmenu {
+    width: 150px;
+    height: 45px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: url(logo2.png);
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
  .dropbtn {
   background-color: bisque;
   color: rgb(51, 49, 47);
@@ -172,15 +182,15 @@ button:active:after{
  
  .container {
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 250px 250px 250px 250px;
+    grid-template-columns: 204.8px 204.8px 204.8px 204.8px;
+    grid-template-rows: 283.8px 283.8px 283.8px 283.8px;
     grid-gap: 1rem;
     margin-top: 400px;
   }
   
   body {
-    background-color: bisque;
-    height: 100vh;
+    background: linear-gradient(45deg, rgb(252, 240, 225),bisque, rgb(252, 193, 122));
+    height: 300vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,8 +223,6 @@ button:active:after{
 /* -----pokemon card ----- */
 
 .pokecard {
-  /*background-color: aqua;
-  background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);*/
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   color: rgb(34, 28, 28);
   border-radius: 4px;
@@ -223,30 +231,41 @@ button:active:after{
   display: inline-block;
   flex-direction: column;
   padding: 0;
+
 }
 
 
 /* -----pokemon card contents----- */
 
-.pokecard.name {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  position: absolute;
+.float-container {
+  width: 80%;
+}
+.float-child1 {
+  width: auto;
+  float: left;
+}
+.float-child2 {
+  width: auto;
+  float: right;
+}
+
+hr {
+  width: 180px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: black;
 }
 
 .name {
   max-width: 80%;
   height: auto;
-  font-size: 20px;
+  font-size: 25px;
   font-style: bold;
 }
 
-.pokecard.number {
-  width: 80%;
-  height: auto;
-  text-align: center;
+.id {
   position: absolute;
+  font-size: 25px;
 }
 
 .pokecard img{
@@ -254,18 +273,19 @@ button:active:after{
   width: 100%;
 }
 
-.pokecard.type {
+/* .type {
   max-width: 100%;
   max-height: auto;
   text-align: center;
   position: absolute;
   bottom: 0;
-}
+} */
 
 .type {
   max-width: 100%;
   font-size: 20px;
   font-style: bold;
+  border: 1px black;
 }
 
 .type__fire {
@@ -311,3 +331,10 @@ button:active:after{
   background-color: #F5F5F5;
   }
 
+  /*-----Meida Query-----*/
+
+  @media (max-width: 1200px) and (min-width: 586px){
+    .collapse {
+      display: none !important;
+}
+}

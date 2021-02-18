@@ -22,11 +22,6 @@ const colorMapHex = {'fire':'#FDDFDF', 'grass':'#DEFDE0', 'electric':'#FCF7DE', 
 //  const element;
 //  element.style.background = `Linear gradient: ${types.map( type => colorMapHex[type]).join(" ")}`
 
-//button click music play function
-// function playMusic(){
-//   var music = new Audio('Theme.mid');
-//   music.play();
-//   }
 
 var music = document.getElementById('music');
 
@@ -53,7 +48,8 @@ xhr.onreadystatechange =  function () {
     }
     
     for(let i = 0; i<12 ; i++){
-    document.querySelector(`#pname${i+1}`).textContent = `${myObject[i].name} id:${myObject[i].id}`;
+    document.querySelector(`#pname${i+1}`).textContent = `${myObject[i].name}`;
+    document.querySelector(`#pid${i+1}`).textContent = `${myObject[i].id}`;
     document.querySelector(`#ptype${i+1}`).textContent = `${myObject[i].type}`;
     document.querySelectorAll('.pokecard')[i].classList.add(colorMap[myObject[i].type])
     }   
